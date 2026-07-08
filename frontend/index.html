@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie – Google Gemini Powered Learning Assistant</title>
+    <meta name="description" content="An intelligent learning assistant powered by Google Gemini. Chat, explain concepts, generate quizzes, summarize texts, and build personalized roadmaps.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="navLogo">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <span class="logo-text">Edu<span class="logo-accent">Genie</span></span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="nav-item"><a href="#chat-section" class="nav-link"><i class="fa-solid fa-comments"></i> AI Chat</a></li>
+                <li class="nav-item"><a href="#explain-section" class="nav-link"><i class="fa-solid fa-lightbulb"></i> Explainer</a></li>
+                <li class="nav-item"><a href="#quiz-section" class="nav-link"><i class="fa-solid fa-spell-check"></i> Quiz Gen</a></li>
+                <li class="nav-item"><a href="#summary-section" class="nav-link"><i class="fa-solid fa-align-left"></i> Summarizer</a></li>
+                <li class="nav-item"><a href="#roadmap-section" class="nav-link"><i class="fa-solid fa-route"></i> Roadmap</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge"><i class="fa-solid fa-sparkles"></i> Powered by Google Gemini AI</div>
+                <h1 class="hero-title">Your Smart AI Study Companion</h1>
+                <p class="hero-subtitle">Unlock your full potential with EduGenie. Chat with an AI tutor, simplify complex concepts, generate custom revision quizzes, summarize lengthy articles, and map out your perfect learning paths.</p>
+                <div class="hero-actions">
+                    <a href="#chat-section" class="btn btn-primary btn-lg"><i class="fa-solid fa-rocket"></i> Get Started</a>
+                    <a href="#explain-section" class="btn btn-outline btn-lg"><i class="fa-solid fa-play"></i> Watch Demo</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <i class="fa-solid fa-brain"></i>
+                    <div>
+                        <h4>Smart Explanations</h4>
+                        <p>Complex topics simplified instantly</p>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fa-solid fa-check-double"></i>
+                    <div>
+                        <h4>Adaptive Quizzes</h4>
+                        <p>Test your retention</p>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <!-- Dynamic SVG Illustration -->
+                    <svg viewBox="0 0 500 500" class="svg-illustration" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0d6efd" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#0a58ca" stop-opacity="0.9"/>
+                            </linearGradient>
+                            <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6f42c1" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#4f2ba1" stop-opacity="0.9"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Background Circle -->
+                        <circle cx="250" cy="250" r="180" fill="url(#blueGrad)" opacity="0.1"/>
+                        <circle cx="250" cy="250" r="140" fill="none" stroke="url(#blueGrad)" stroke-width="2" stroke-dasharray="10 5" opacity="0.3"/>
+                        <!-- Central Book and Lightbulb representation -->
+                        <rect x="180" y="200" width="140" height="180" rx="10" fill="url(#blueGrad)"/>
+                        <path d="M180,240 L320,240 M180,290 L320,290 M180,340 L320,340" stroke="#ffffff" stroke-width="4" opacity="0.5"/>
+                        <!-- Lightbulb -->
+                        <path d="M250,110 C220,110 200,130 200,160 C200,180 215,195 225,205 L225,225 L275,225 L275,205 C285,195 300,180 300,160 C300,130 280,110 250,110 Z" fill="url(#purpleGrad)"/>
+                        <rect x="235" y="225" width="30" height="8" rx="2" fill="#e9ecef"/>
+                        <rect x="240" y="235" width="20" height="8" rx="2" fill="#dee2e6"/>
+                        <!-- Connecting Lines / Rays -->
+                        <line x1="250" y1="90" x2="250" y2="70" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                        <line x1="180" y1="130" x2="160" y2="110" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                        <line x1="320" y1="130" x2="340" y2="110" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+        
+        <!-- Section 1: AI Chat -->
+        <section id="chat-section" class="feature-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fa-solid fa-comments"></i></div>
+                <h2 class="section-title">AI Study Chatbot</h2>
+                <p class="section-desc">Have a conversation with an assistant that remembers context. Ask questions, get definitions, or ask for clarifications on academic topics.</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-bubble bot">
+                        <div class="bubble-avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="bubble-content">
+                            <p>Hi there! I am your EduGenie study partner. Ask me anything about your studies, and I'll do my best to help you learn!</p>
+                            <span class="bubble-time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <form id="chatForm" class="chat-form">
+                        <input type="text" id="chatInput" placeholder="Ask a study question... (e.g., 'Explain Photosynthesis')" required autocomplete="off">
+                        <button type="submit" class="btn btn-primary" id="chatSendBtn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Concept Explainer -->
+        <section id="explain-section" class="feature-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h2 class="section-title">Concept Explainer</h2>
+                <p class="section-desc">Struggling with a difficult theory? Enter the topic and select a custom explanation level tailored to your background.</p>
+            </div>
+            
+            <div class="tool-card">
+                <form id="explainForm" class="tool-form">
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <label for="explainTopic"><i class="fa-solid fa-tag"></i> Topic or Concept</label>
+                            <input type="text" id="explainTopic" placeholder="e.g., 'Quantum Entanglement', 'Supply & Demand', 'Mitosis'" required>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label for="explainLevel"><i class="fa-solid fa-graduation-cap"></i> Target Audience</label>
+                            <select id="explainLevel">
+                                <option value="child">Explain like I'm 5 (ELI5)</option>
+                                <option value="beginner" selected>High School Student (Beginner)</option>
+                                <option value="college">College Student (Intermediate)</option>
+                                <option value="expert">Field Professional (Advanced)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="explainSubmitBtn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Simplify Concept
+                    </button>
+                </form>
+                
+                <div class="output-panel hidden" id="explainOutputPanel">
+                    <div class="output-header">
+                        <span class="output-title"><i class="fa-solid fa-circle-info"></i> Explanation Result</span>
+                        <button class="btn-copy" onclick="copyContent('explainResultText')" title="Copy to clipboard">
+                            <i class="fa-solid fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="output-body" id="explainResultText">
+                        <!-- Output dynamic HTML loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Quiz Generator -->
+        <section id="quiz-section" class="feature-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fa-solid fa-spell-check"></i></div>
+                <h2 class="section-title">AI Quiz Generator</h2>
+                <p class="section-desc">Test your understanding. Input a subject or source text, generate a multiple-choice quiz, and check your answers interactively.</p>
+            </div>
+            
+            <div class="tool-card">
+                <form id="quizForm" class="tool-form">
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <label for="quizTopic"><i class="fa-solid fa-book-open"></i> Quiz Topic or Subject</label>
+                            <input type="text" id="quizTopic" placeholder="e.g., 'Ancient Rome', 'Python Data Structures', 'Organic Chemistry'" required>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label for="quizNum"><i class="fa-solid fa-list-numeric"></i> Number of Questions</label>
+                            <select id="quizNum">
+                                <option value="3" selected>3 Questions</option>
+                                <option value="5">5 Questions</option>
+                                <option value="10">10 Questions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="quizSubmitBtn">
+                        <i class="fa-solid fa-circle-question"></i> Generate Quiz
+                    </button>
+                </form>
+                
+                <div class="output-panel hidden" id="quizOutputPanel">
+                    <div class="output-header">
+                        <span class="output-title"><i class="fa-solid fa-check-to-slot"></i> Play Quiz</span>
+                    </div>
+                    <div class="output-body">
+                        <div id="quizContainer">
+                            <!-- Injected questions -->
+                        </div>
+                        <div class="quiz-footer">
+                            <button class="btn btn-success" id="quizCheckBtn"><i class="fa-solid fa-square-poll-vertical"></i> Check Answers</button>
+                            <div class="quiz-score hidden" id="quizScoreBox"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Text Summarizer -->
+        <section id="summary-section" class="feature-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fa-solid fa-align-left"></i></div>
+                <h2 class="section-title">Smart Text Summarizer</h2>
+                <p class="section-desc">Cut down reading times. Paste an essay, textbook chapter, or research article, and get a concise summary in seconds.</p>
+            </div>
+            
+            <div class="tool-card">
+                <form id="summaryForm" class="tool-form">
+                    <div class="form-group">
+                        <label for="summaryText"><i class="fa-solid fa-file-text"></i> Source Text (Paste article or document here)</label>
+                        <textarea id="summaryText" rows="8" placeholder="Paste your text here (minimum 100 words)..." required></textarea>
+                    </div>
+                    <div class="form-row align-center">
+                        <div class="form-group flex-1">
+                            <label for="summaryLength"><i class="fa-solid fa-sliders"></i> Summary Style</label>
+                            <select id="summaryLength">
+                                <option value="short" selected>Short & Bulleted (Quick Read)</option>
+                                <option value="medium">Medium Length (Key Concepts)</option>
+                                <option value="detailed">Detailed Analysis (Comprehensive)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="summarySubmitBtn">
+                            <i class="fa-solid fa-compress"></i> Summarize
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="output-panel hidden" id="summaryOutputPanel">
+                    <div class="output-header">
+                        <span class="output-title"><i class="fa-solid fa-clipboard-list"></i> Summary Result</span>
+                        <button class="btn-copy" onclick="copyContent('summaryResultText')" title="Copy to clipboard">
+                            <i class="fa-solid fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <div class="output-body" id="summaryResultText">
+                        <!-- Injected summary -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Learning Roadmap -->
+        <section id="roadmap-section" class="feature-section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fa-solid fa-route"></i></div>
+                <h2 class="section-title">Personalized Learning Roadmap</h2>
+                <p class="section-desc">Create a structured step-by-step curriculum to learn any subject, complete with milestones, duration suggestions, and resource lists.</p>
+            </div>
+            
+            <div class="tool-card">
+                <form id="roadmapForm" class="tool-form">
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <label for="roadmapSubject"><i class="fa-solid fa-map-pin"></i> Subject or Career Goal</label>
+                            <input type="text" id="roadmapSubject" placeholder="e.g., 'Learn Web Development', 'Master Data Science', 'Spanish for Beginners'" required>
+                        </div>
+                        <div class="form-group flex-1">
+                            <label for="roadmapDuration"><i class="fa-solid fa-calendar-days"></i> Allocated Duration</label>
+                            <select id="roadmapDuration">
+                                <option value="4-weeks" selected>4 Weeks (Crash Course)</option>
+                                <option value="12-weeks">12 Weeks (Detailed Semester)</option>
+                                <option value="6-months">6 Months (Comprehensive Mastery)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="roadmapSubmitBtn">
+                        <i class="fa-solid fa-diagram-project"></i> Generate Roadmap
+                    </button>
+                </form>
+                
+                <div class="output-panel hidden" id="roadmapOutputPanel">
+                    <div class="output-header">
+                        <span class="output-title"><i class="fa-solid fa-route"></i> Generated Roadmap Curriculum</span>
+                    </div>
+                    <div class="output-body">
+                        <div class="roadmap-timeline" id="roadmapTimeline">
+                            <!-- Injected timeline nodes -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                    <span class="logo-text">Edu<span class="logo-accent">Genie</span></span>
+                </a>
+                <p>An intelligent, interactive learning platform designed to streamline study techniques using generative artificial intelligence.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Core Modules</h4>
+                <ul>
+                    <li><a href="#chat-section">AI Chatbot</a></li>
+                    <li><a href="#explain-section">Concept Explainer</a></li>
+                    <li><a href="#quiz-section">Quiz Generator</a></li>
+                    <li><a href="#summary-section">Text Summarizer</a></li>
+                    <li><a href="#roadmap-section">Roadmap Builder</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>EduGenie Platform</h4>
+                <p><i class="fa-solid fa-code"></i> Developed as an Internship Project</p>
+                <p><i class="fa-solid fa-server"></i> FastAPI Backend & SQLite Database</p>
+                <p><i class="fa-solid fa-microchip"></i> Powered by Gemini 3.5 LLM APIs</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduGenie. Open-source educational resource. Ready for GitHub.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
