@@ -164,7 +164,7 @@ Follow these step-by-step instructions to get EduGenie running on your local mac
 
 ### 1. Clone the Project
 ```bash
-git clone https://github.com/<your-github-username>/EduGenie.git
+git clone https://github.com/RaviT05/EduGenie.git
 cd edugenie
 ```
 
@@ -239,11 +239,14 @@ EduGenie was collaboratively developed as an internship project by:
 
 ## 🌐 Live Demo
 
-🚀 **Coming Soon**  
-*(Deployed project URL will be linked here after staging configuration.)*
+### 🚀 Frontend (Vercel)
+https://edu-genie-five.vercel.app/
 
----
+### ⚙️ Backend API (Render)
+https://edugenie-0t17.onrender.com/
 
+### 📚 Swagger API Documentation
+https://edugenie-0t17.onrender.com/docs
 ## 📄 License
 
 This project was developed as part of an internship learning program and is intended for educational and portfolio purposes.
