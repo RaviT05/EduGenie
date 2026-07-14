@@ -2,7 +2,12 @@
 // EduGenie JavaScript - Backend Integration Layer (Phase 4)
 // ==========================================================================
 
-const API_BASE = "http://127.0.0.1:8000/api/v1/assistant";
+// UPDATE THIS: Replace with your actual live Render backend URL (e.g. https://edugenie.onrender.com)
+const RENDER_BACKEND_URL = "https://edugenie-0t17.onrender.com"; 
+
+const API_BASE = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+    ? "http://127.0.0.1:8000/api/v1/assistant"
+    : `${RENDER_BACKEND_URL}/api/v1/assistant`;
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Sticky Navigation & Active Link Highlighting ---
