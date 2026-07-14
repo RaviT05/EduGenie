@@ -2,7 +2,7 @@
 // EduGenie JavaScript - Backend Integration Layer (Phase 4)
 // ==========================================================================
 
-const API_BASE = "https://edugenie-0t17.onrender.com/api/v1/assistant";
+const API_BASE = "http://127.0.0.1:8000/api/v1/assistant";
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Sticky Navigation & Active Link Highlighting ---
