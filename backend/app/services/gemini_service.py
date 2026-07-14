@@ -65,7 +65,7 @@ class GeminiService:
                 "in your backend/.env file with a valid Google Gemini API Key."
             )
             
-        model_name = "gemini-2.5-flash-lite"
+        model_name = "gemini-2.0-flash"
         
         generation_config = {}
         if response_schema is not None:
