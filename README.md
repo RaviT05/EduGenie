@@ -9,6 +9,11 @@
 ![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
 📖 **[Read the EduGenie Project Documentation (PDF)](EduGenie_Documentation.pdf)**
+## 🎥 Demo Video
+
+A complete demonstration of the project is available here.
+
+📹 **Demo:** [View Demo Video](./DEMO.md)
 
 
 EduGenie is an interactive, AI-powered educational learning assistant designed to streamline study techniques, simplify academic topics, and optimize learning processes. By combining a lightweight modern client interface with a robust, async Python API, EduGenie leverages the **Google Gemini API** to act as a personal AI study companion.
